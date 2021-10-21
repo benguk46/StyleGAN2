@@ -33,9 +33,8 @@ jobs:
         pip install scipy==1.3.3
         pip install requests==2.22.0
         pip install Pillow==6.2.1
-        apt install nodejs
-        curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
         curl -fsSL https://code-server.dev/install.sh | sh
+        apt install npm nodejs
         npm install -g localtunnel
         code-server --bind-addr 127.0.0.1:8888 --auth none &  lt --port --port 8888
         cd /inputs/stylegan2
